@@ -1,4 +1,4 @@
-FROM mysql:8.0.35-debian
+FROM mysql:8.2.0-oracle
 
 ENV MYSQL_DATABASE=laboration1
 ENV MYSQL_ROOT_PASSWORD=root
