@@ -6,4 +6,4 @@ COPY Laboration1.sql .
 #COPY moon_missions.sql /docker-entrypoint.initdb.d/
 #COPY book_store.sql /docker-entrypoint.initdb.d/
 #COPY insert_data.sql /docker-entrypoint.initdb.d/
-RUN mysql  laboration1 < Laboration.sql
+CMD mysql  laboration1 < Laboration.sql
