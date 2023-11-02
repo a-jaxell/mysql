@@ -18,9 +18,8 @@ CREATE TABLE language(
     language varchar(255) CHECK (language REGEXP '^[A-Za-z]+$')
 );
 CREATE TABLE book(
-    isbn varchar(255) PRIMARY KEY CHECK (isbn REGEXP '[0-9]{13}')
-        ,
-    title varchar(255) CHECK (title REGEXP '^([A-Za-z0-9]+( [A-Za-z0-9]+)*)$'),
+    isbn varchar(255) PRIMARY KEY CHECK (isbn REGEXP '[0-9]{13}'),
+    title varchar(255) CHECK (title REGEXP '^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)$'),
     language_id int NOT NULL ,
     price int NOT NULL,
     publication_date date NOT NULL,
@@ -38,8 +37,8 @@ CREATE TABLE book_language(
 --
 CREATE TABLE bookstore(
     store_id int PRIMARY KEY AUTO_INCREMENT,
-    name varchar(255) CHECK(name REGEXP '^([A-Za-z0-9]+( [A-Za-z0-9]+)*)$'),
-    location varchar(255) CHECK (location REGEXP '^([A-Za-z0-9]+( [A-Za-z0-9]+)*)$')
+    name varchar(255) CHECK(name REGEXP '^([A-Za-z0-9&]+( [A-Za-z0-9&]+)*)$'),
+    location varchar(255) CHECK (location REGEXP '^([A-Za-z0-9,]+( [A-Za-z0-9,]+)*)$')
 );
 --
 -- Tabell: "inventory"
