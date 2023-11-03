@@ -1,6 +1,7 @@
 --
 -- Uppgift 1
 --
+USE laboration1;
 CREATE TABLE succesful_mission AS
     SELECT *
     FROM moon_mission
