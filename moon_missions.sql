@@ -23,7 +23,7 @@ SET operator = REPLACE(operator, ' ','');
 -- Uppgift 4
 --
 DELETE FROM succesful_mission
-WHERE YEAR(launch_date) >= YEAR('2010');
+WHERE YEAR(launch_date) >= 2010;
 --
 -- Uppgift 5
 --
